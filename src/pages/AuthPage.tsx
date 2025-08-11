@@ -130,7 +130,7 @@ const AuthPage = () => {
                       onChange={(e) => setEmail(e.target.value)}
                       required
                       className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
-                      placeholder="mohammed.k221m@gmail.com"
+                      placeholder="البريد الإلكتروني"
                     />
                   </div>
                   
@@ -144,7 +144,7 @@ const AuthPage = () => {
                         onChange={(e) => setPassword(e.target.value)}
                         required
                         className="bg-white/10 border-white/20 text-white placeholder:text-white/60 pl-10"
-                        placeholder="••••••••"
+                        placeholder="كلمة المرور"
                       />
                       <Button
                         type="button"
