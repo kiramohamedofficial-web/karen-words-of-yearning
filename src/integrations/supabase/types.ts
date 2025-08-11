@@ -14,7 +14,93 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      books: {
+        Row: {
+          author: string
+          category: string | null
+          content: string | null
+          cover_url: string | null
+          created_at: string
+          description: string | null
+          id: string
+          is_free: boolean | null
+          price: number | null
+          published_date: string | null
+          rating: number | null
+          title: string
+          total_ratings: number | null
+          total_reviews: number | null
+          updated_at: string
+        }
+        Insert: {
+          author: string
+          category?: string | null
+          content?: string | null
+          cover_url?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          is_free?: boolean | null
+          price?: number | null
+          published_date?: string | null
+          rating?: number | null
+          title: string
+          total_ratings?: number | null
+          total_reviews?: number | null
+          updated_at?: string
+        }
+        Update: {
+          author?: string
+          category?: string | null
+          content?: string | null
+          cover_url?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          is_free?: boolean | null
+          price?: number | null
+          published_date?: string | null
+          rating?: number | null
+          title?: string
+          total_ratings?: number | null
+          total_reviews?: number | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          bio: string | null
+          created_at: string
+          display_name: string | null
+          id: string
+          is_admin: boolean | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          bio?: string | null
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          is_admin?: boolean | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          avatar_url?: string | null
+          bio?: string | null
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          is_admin?: boolean | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
