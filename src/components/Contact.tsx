@@ -40,20 +40,20 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 animate-fade-in delay-800">
+    <section id="contact" className="py-20 bg-primary text-primary-foreground animate-fade-in delay-800">
       <div className="container mx-auto px-4">
-        <Card className="max-w-4xl mx-auto bg-secondary/50 shadow-elegant">
+        <Card className="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm shadow-glow border-white/20">
           <CardContent className="p-8 md:p-12">
             <div className="text-center mb-12 relative">
-              <h2 className="text-4xl font-bold text-primary-dark inline-block px-8 bg-secondary/50 relative z-10">
+              <h2 className="text-4xl font-bold text-white inline-block px-8 bg-white/10 backdrop-blur-sm relative z-10 rounded-lg">
                 تواصل معي
               </h2>
-              <div className="absolute top-1/2 right-0 w-full h-0.5 bg-primary z-0"></div>
+              <div className="absolute top-1/2 right-0 w-full h-0.5 bg-accent z-0"></div>
             </div>
 
             <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <Label htmlFor="name" className="text-primary-dark font-semibold">
+                <Label htmlFor="name" className="text-white font-semibold">
                   الاسم الكامل
                 </Label>
                 <Input
@@ -62,12 +62,12 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="transition-all duration-300 focus:ring-2 focus:ring-primary/20"
+                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:border-accent focus:ring-accent/30"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-primary-dark font-semibold">
+                <Label htmlFor="email" className="text-white font-semibold">
                   البريد الإلكتروني
                 </Label>
                 <Input
@@ -77,12 +77,12 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="transition-all duration-300 focus:ring-2 focus:ring-primary/20"
+                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:border-accent focus:ring-accent/30"
                 />
               </div>
 
               <div className="md:col-span-2 space-y-2">
-                <Label htmlFor="subject" className="text-primary-dark font-semibold">
+                <Label htmlFor="subject" className="text-white font-semibold">
                   الموضوع
                 </Label>
                 <Input
@@ -91,12 +91,12 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="transition-all duration-300 focus:ring-2 focus:ring-primary/20"
+                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:border-accent focus:ring-accent/30"
                 />
               </div>
 
               <div className="md:col-span-2 space-y-2">
-                <Label htmlFor="message" className="text-primary-dark font-semibold">
+                <Label htmlFor="message" className="text-white font-semibold">
                   الرسالة
                 </Label>
                 <Textarea
@@ -106,7 +106,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="transition-all duration-300 focus:ring-2 focus:ring-primary/20 resize-none"
+                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:border-accent focus:ring-accent/30 resize-none"
                 />
               </div>
 
@@ -114,7 +114,7 @@ const Contact = () => {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-primary hover:bg-primary-dark transition-all duration-300"
+                  className="w-full bg-accent hover:bg-accent/90 text-white transition-smooth shadow-glow"
                 >
                   إرسال الرسالة
                 </Button>
@@ -126,7 +126,7 @@ const Contact = () => {
                 <a
                   key={index}
                   href={social.href}
-                  className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center hover:bg-primary-dark transition-all duration-300 hover:-translate-y-1"
+                  className="w-12 h-12 bg-white/20 backdrop-blur-sm text-white rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-all duration-300 hover:-translate-y-1 border border-white/30"
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5" />

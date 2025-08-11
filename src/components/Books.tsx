@@ -39,7 +39,7 @@ const Books = () => {
           <h2 className="text-4xl font-bold text-primary-dark inline-block px-8 bg-background relative z-10">
             المؤلفات
           </h2>
-          <div className="absolute top-1/2 right-0 w-full h-0.5 bg-primary z-0"></div>
+          <div className="absolute top-1/2 right-0 w-full h-0.5 bg-accent z-0"></div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -62,7 +62,7 @@ const Books = () => {
                   <span>{book.type}</span>
                 </div>
                 <p className="text-foreground mb-6 line-clamp-3">{book.description}</p>
-                <Button className="w-full bg-primary hover:bg-primary-dark">
+                <Button className="w-full bg-accent hover:bg-accent/90 text-white transition-smooth">
                   اشتري الآن
                 </Button>
               </CardContent>

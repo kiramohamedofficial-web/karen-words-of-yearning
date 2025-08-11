@@ -19,9 +19,9 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold text-white mb-6 relative">
               عن المدونة
-              <span className="absolute bottom-0 right-0 w-12 h-0.5 bg-primary"></span>
+              <span className="absolute bottom-0 right-0 w-12 h-0.5 bg-accent"></span>
             </h3>
-            <p className="leading-relaxed">
+            <p className="leading-relaxed text-gray-300">
               هذه المدونة الشخصية للكاتب كريم محمد سالم ابحن، تهدف إلى مشاركة أفكاره، مؤلفاته، وخبراته مع القراء والمهتمين بالأدب والكتابة.
             </p>
           </div>
@@ -30,14 +30,14 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold text-white mb-6 relative">
               روابط سريعة
-              <span className="absolute bottom-0 right-0 w-12 h-0.5 bg-primary"></span>
+              <span className="absolute bottom-0 right-0 w-12 h-0.5 bg-accent"></span>
             </h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="hover:text-primary transition-colors duration-300 hover:-translate-x-1 inline-block"
+                    className="hover:text-accent transition-colors duration-300 hover:-translate-x-1 inline-block"
                   >
                     {link.label}
                   </a>
@@ -50,9 +50,9 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold text-white mb-6 relative">
               النشرة البريدية
-              <span className="absolute bottom-0 right-0 w-12 h-0.5 bg-primary"></span>
+              <span className="absolute bottom-0 right-0 w-12 h-0.5 bg-accent"></span>
             </h3>
-            <p className="mb-6">
+            <p className="mb-6 text-gray-300">
               اشترك في نشرتنا البريدية لتكون أول من يعرف عن إصداراتي الجديدة والفعاليات القادمة.
             </p>
             <div className="flex gap-2">
@@ -61,7 +61,7 @@ const Footer = () => {
                 placeholder="بريدك الإلكتروني"
                 className="flex-1 bg-gray-800 border-gray-700 text-white placeholder:text-gray-400"
               />
-              <Button className="bg-primary hover:bg-primary-dark">
+              <Button className="bg-accent hover:bg-accent/90">
                 <Send className="w-4 h-4" />
               </Button>
             </div>

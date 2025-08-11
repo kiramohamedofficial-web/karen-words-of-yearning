@@ -8,12 +8,12 @@ const QuotesBar = () => {
   ];
 
   return (
-    <div className="bg-primary-dark text-primary-foreground py-4 overflow-hidden shadow-elegant">
+    <div className="bg-primary text-primary-foreground py-4 overflow-hidden shadow-elegant">
       <div className="flex animate-scroll whitespace-nowrap">
         {[...quotes, ...quotes].map((quote, index) => (
           <span
             key={index}
-            className="inline-block mx-10 text-lg italic font-light"
+            className="inline-block mx-10 text-lg italic font-light text-accent"
           >
             "{quote}"
           </span>

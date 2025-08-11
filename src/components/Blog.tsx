@@ -30,13 +30,13 @@ const Blog = () => {
   ];
 
   return (
-    <section id="blog" className="py-20 animate-fade-in delay-600">
+    <section id="blog" className="py-20 bg-secondary animate-fade-in delay-600">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 relative">
-          <h2 className="text-4xl font-bold text-primary-dark inline-block px-8 bg-background relative z-10">
+          <h2 className="text-4xl font-bold text-primary-dark inline-block px-8 bg-secondary relative z-10">
             أحدث المقالات
           </h2>
-          <div className="absolute top-1/2 right-0 w-full h-0.5 bg-primary z-0"></div>
+          <div className="absolute top-1/2 right-0 w-full h-0.5 bg-accent z-0"></div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -55,7 +55,7 @@ const Blog = () => {
               <CardContent className="p-6">
                 <div className="flex items-center justify-between mb-3 text-sm text-muted-foreground">
                   <span>{post.date}</span>
-                  <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs">
+                  <span className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs">
                     {post.category}
                   </span>
                 </div>
@@ -65,7 +65,7 @@ const Blog = () => {
                 <p className="text-foreground mb-4 line-clamp-3">{post.excerpt}</p>
                 <a 
                   href="#" 
-                  className="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors group"
+                  className="inline-flex items-center text-primary font-semibold hover:text-accent transition-colors group"
                 >
                   اقرأ المزيد
                   <ArrowLeft className="mr-2 w-4 h-4 transition-transform group-hover:translate-x-1" />

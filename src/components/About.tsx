@@ -17,13 +17,13 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 animate-fade-in delay-200">
+    <section id="about" className="py-20 bg-secondary animate-fade-in delay-200">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 relative">
-          <h2 className="text-4xl font-bold text-primary-dark inline-block px-8 bg-background relative z-10">
+          <h2 className="text-4xl font-bold text-primary-dark inline-block px-8 bg-secondary relative z-10">
             عن الكاتب
           </h2>
-          <div className="absolute top-1/2 right-0 w-full h-0.5 bg-primary z-0"></div>
+          <div className="absolute top-1/2 right-0 w-full h-0.5 bg-accent z-0"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -51,7 +51,7 @@ const About = () => {
 
             <div className="space-y-6">
               {timelineItems.map((item, index) => (
-                <div key={index} className="relative pr-8 border-r-2 border-primary">
+                <div key={index} className="relative pr-8 border-r-2 border-accent">
                   <div className="absolute -right-2 top-1 w-4 h-4 bg-primary-dark rounded-full"></div>
                   <div className="font-bold text-primary-dark text-lg mb-2">{item.year}</div>
                   <p className="text-foreground">{item.description}</p>
