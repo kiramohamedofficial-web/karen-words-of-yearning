@@ -1,6 +1,10 @@
+import { useLanguage } from "@/hooks/use-language";
+import { motion } from "framer-motion";
 import authorPortrait from "@/assets/author-portrait.jpg";
 
 const About = () => {
+  const { t } = useLanguage();
+
   const timelineItems = [
     {
       year: "2015",
@@ -17,17 +21,27 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-secondary animate-fade-in delay-200">
+    <section id="about" className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 relative">
+        <motion.div 
+          className="text-center mb-16 relative"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-4xl font-bold text-primary-dark inline-block px-8 bg-secondary relative z-10">
-            عن الكاتب
+            {t('aboutAuthor')}
           </h2>
           <div className="absolute top-1/2 right-0 w-full h-0.5 bg-accent z-0"></div>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative group animate-fade-in delay-400">
+          <motion.div 
+            className="relative group"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <div className="rounded-lg overflow-hidden shadow-elegant">
               <img
                 src={authorPortrait}
@@ -36,10 +50,14 @@ const About = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-primary-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="animate-fade-in delay-600">
-            <h3 className="text-3xl font-bold text-primary-dark mb-6">سيرة ذاتية</h3>
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <h3 className="text-3xl font-bold text-primary-dark mb-6">{t('biography')}</h3>
             <div className="space-y-4 text-lg text-foreground mb-8">
               <p>
                 ولد كريم محمد سالم ابحن في مدينة الدار البيضاء بالمغرب عام 1990. نشأ في أسرة محبة للأدب والثقافة، مما غرس فيه حب القراءة والكتابة منذ الصغر.
@@ -51,14 +69,25 @@ const About = () => {
 
             <div className="space-y-6">
               {timelineItems.map((item, index) => (
-                <div key={index} className="relative pr-8 border-r-2 border-accent">
-                  <div className="absolute -right-2 top-1 w-4 h-4 bg-primary-dark rounded-full"></div>
-                  <div className="font-bold text-primary-dark text-lg mb-2">{item.year}</div>
+                <motion.div 
+                  key={index} 
+                  className="relative pr-8 border-r-2 border-accent"
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                >
+                  <motion.div 
+                    className="absolute -right-2 top-1 w-4 h-4 bg-primary-dark rounded-full"
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.4, delay: index * 0.2 + 0.3 }}
+                  />
+                  <div className="font-bold text-accent text-lg mb-2">{item.year}</div>
                   <p className="text-foreground">{item.description}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

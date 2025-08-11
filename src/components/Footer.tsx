@@ -1,55 +1,85 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Send } from "lucide-react";
+import { Send, Twitter, Facebook, Instagram, Youtube, Linkedin, Github } from "lucide-react";
+import { useLanguage } from "@/hooks/use-language";
+import { motion } from "framer-motion";
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   const quickLinks = [
-    { href: "#home", label: "الرئيسية" },
-    { href: "#about", label: "عن الكاتب" },
-    { href: "#books", label: "المؤلفات" },
-    { href: "#blog", label: "المدونة" },
-    { href: "#contact", label: "اتصل بي" },
+    { href: "#home", label: t('home') },
+    { href: "#about", label: t('about') },
+    { href: "#books", label: t('books') },
+    { href: "#blog", label: t('blog') },
+    { href: "#contact", label: t('contact') },
+  ];
+
+  const socialLinks = [
+    { icon: Twitter, href: "https://twitter.com/karimabhen", label: "Twitter", color: "hover:text-blue-400" },
+    { icon: Facebook, href: "https://facebook.com/karimabhen", label: "Facebook", color: "hover:text-blue-600" },
+    { icon: Instagram, href: "https://instagram.com/karimabhen", label: "Instagram", color: "hover:text-pink-500" },
+    { icon: Youtube, href: "https://youtube.com/@karimabhen", label: "YouTube", color: "hover:text-red-500" },
+    { icon: Linkedin, href: "https://linkedin.com/in/karimabhen", label: "LinkedIn", color: "hover:text-blue-700" },
+    { icon: Github, href: "https://github.com/karimabhen", label: "GitHub", color: "hover:text-gray-400" },
   ];
 
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-4 gap-12">
           {/* About Section */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             <h3 className="text-xl font-bold text-white mb-6 relative">
-              عن المدونة
+              {t('aboutBlog')}
               <span className="absolute bottom-0 right-0 w-12 h-0.5 bg-accent"></span>
             </h3>
-            <p className="leading-relaxed text-gray-300">
+            <p className="leading-relaxed text-gray-300 mb-6">
               هذه المدونة الشخصية للكاتب كريم محمد سالم ابحن، تهدف إلى مشاركة أفكاره، مؤلفاته، وخبراته مع القراء والمهتمين بالأدب والكتابة.
             </p>
-          </div>
+          </motion.div>
 
           {/* Quick Links */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
             <h3 className="text-xl font-bold text-white mb-6 relative">
-              روابط سريعة
+              {t('quickLinks')}
               <span className="absolute bottom-0 right-0 w-12 h-0.5 bg-accent"></span>
             </h3>
             <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.href}>
+              {quickLinks.map((link, index) => (
+                <motion.li 
+                  key={link.href}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
                   <a
                     href={link.href}
                     className="hover:text-accent transition-colors duration-300 hover:-translate-x-1 inline-block"
                   >
                     {link.label}
                   </a>
-                </li>
+                </motion.li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Newsletter */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <h3 className="text-xl font-bold text-white mb-6 relative">
-              النشرة البريدية
+              {t('newsletter')}
               <span className="absolute bottom-0 right-0 w-12 h-0.5 bg-accent"></span>
             </h3>
             <p className="mb-6 text-gray-300">
@@ -65,11 +95,50 @@ const Footer = () => {
                 <Send className="w-4 h-4" />
               </Button>
             </div>
-          </div>
+          </motion.div>
+
+          {/* Social Media */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <h3 className="text-xl font-bold text-white mb-6 relative">
+              تواصل معي
+              <span className="absolute bottom-0 right-0 w-12 h-0.5 bg-accent"></span>
+            </h3>
+            <p className="mb-6 text-gray-300">
+              تابعني على منصات التواصل الاجتماعي لآخر الأخبار والمقالات.
+            </p>
+            <div className="grid grid-cols-3 gap-3">
+              {socialLinks.map((social, index) => (
+                <motion.a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-1 ${social.color} hover:shadow-lg`}
+                  aria-label={social.label}
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <social.icon className="w-5 h-5" />
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
         </div>
 
         <div className="border-t border-gray-700 mt-12 pt-8 text-center">
-          <p>&copy; 2023 كريم محمد سالم ابحن. جميع الحقوق محفوظة.</p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            &copy; 2023 كريم محمد سالم ابحن. {t('allRightsReserved')}
+          </motion.p>
         </div>
       </div>
     </footer>
