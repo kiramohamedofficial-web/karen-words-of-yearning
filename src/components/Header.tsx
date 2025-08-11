@@ -95,7 +95,7 @@ const Header = () => {
               <ThemeToggle />
               <LanguageToggle />
               
-              {/* Auth Buttons Placeholder */}
+              {/* Auth Buttons */}
               <motion.div 
                 className="flex items-center space-x-2 rtl:space-x-reverse"
                 initial={{ opacity: 0 }}
@@ -106,17 +106,23 @@ const Header = () => {
                   variant="ghost" 
                   size="sm" 
                   className="text-white hover:bg-white/10 hover:text-accent"
+                  asChild
                 >
-                  <LogIn className="w-4 h-4 mr-2" />
-                  {t('login')}
+                  <a href="/auth">
+                    <LogIn className="w-4 h-4 mr-2" />
+                    {t('login')}
+                  </a>
                 </Button>
                 <Button 
                   variant="hero" 
                   size="sm"
                   className="text-white border-accent hover:bg-accent"
+                  asChild
                 >
-                  <User className="w-4 h-4 mr-2" />
-                  {t('register')}
+                  <a href="/auth">
+                    <User className="w-4 h-4 mr-2" />
+                    {t('register')}
+                  </a>
                 </Button>
               </motion.div>
             </div>
@@ -169,16 +175,22 @@ const Header = () => {
                 <Button 
                   variant="ghost" 
                   className="w-full justify-start text-white hover:bg-white/10"
+                  asChild
                 >
-                  <LogIn className="w-4 h-4 mr-2" />
-                  {t('login')}
+                  <a href="/auth">
+                    <LogIn className="w-4 h-4 mr-2" />
+                    {t('login')}
+                  </a>
                 </Button>
                 <Button 
                   variant="hero" 
                   className="w-full justify-start"
+                  asChild
                 >
-                  <User className="w-4 h-4 mr-2" />
-                  {t('register')}
+                  <a href="/auth">
+                    <User className="w-4 h-4 mr-2" />
+                    {t('register')}
+                  </a>
                 </Button>
               </div>
             </ul>
