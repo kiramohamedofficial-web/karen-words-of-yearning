@@ -12,16 +12,15 @@ const Footer = () => {
     { href: "#about", label: t('about') },
     { href: "#books", label: t('books') },
     { href: "#blog", label: t('blog') },
-    { href: "#contact", label: t('contact') },
   ];
 
   const socialLinks = [
-    { icon: Twitter, href: "https://twitter.com/karimabhen", label: "Twitter", color: "hover:text-blue-400" },
-    { icon: Facebook, href: "https://facebook.com/karimabhen", label: "Facebook", color: "hover:text-blue-600" },
-    { icon: Instagram, href: "https://instagram.com/karimabhen", label: "Instagram", color: "hover:text-pink-500" },
-    { icon: Youtube, href: "https://youtube.com/@karimabhen", label: "YouTube", color: "hover:text-red-500" },
-    { icon: Linkedin, href: "https://linkedin.com/in/karimabhen", label: "LinkedIn", color: "hover:text-blue-700" },
-    { icon: Github, href: "https://github.com/karimabhen", label: "GitHub", color: "hover:text-gray-400" },
+    { icon: Twitter, href: "https://twitter.com/karimsalem", label: "Twitter", color: "hover:text-blue-400" },
+    { icon: Facebook, href: "https://facebook.com/karimsalem", label: "Facebook", color: "hover:text-blue-600" },
+    { icon: Instagram, href: "https://instagram.com/karimsalem", label: "Instagram", color: "hover:text-pink-500" },
+    { icon: Youtube, href: "https://youtube.com/@karimsalem", label: "YouTube", color: "hover:text-red-500" },
+    { icon: Linkedin, href: "https://linkedin.com/in/karimsalem", label: "LinkedIn", color: "hover:text-blue-700" },
+    { icon: Github, href: "https://github.com/karimsalem", label: "GitHub", color: "hover:text-gray-400" },
   ];
 
   return (
@@ -39,7 +38,7 @@ const Footer = () => {
               <span className="absolute bottom-0 right-0 w-12 h-0.5 bg-accent"></span>
             </h3>
             <p className="leading-relaxed text-gray-300 mb-6">
-              هذه المدونة الشخصية للكاتب كريم محمد سالم ابحن، تهدف إلى مشاركة أفكاره، مؤلفاته، وخبراته مع القراء والمهتمين بالأدب والكتابة.
+              هذه المدونة الشخصية للكاتب كريم محمد سالم، تهدف إلى مشاركة أفكاره، مؤلفاته، وخبراته مع القراء والمهتمين بالأدب والكتابة.
             </p>
           </motion.div>
 
@@ -104,11 +103,11 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <h3 className="text-xl font-bold text-white mb-6 relative">
-              تواصل معي
+              {t('followMe')}
               <span className="absolute bottom-0 right-0 w-12 h-0.5 bg-accent"></span>
             </h3>
             <p className="mb-6 text-gray-300">
-              تابعني على منصات التواصل الاجتماعي لآخر الأخبار والمقالات.
+              تابعني على منصات التواصل الاجتماعي لآخر الأخبار والمقالات والإصدارات الجديدة.
             </p>
             <div className="grid grid-cols-3 gap-3">
               {socialLinks.map((social, index) => (
@@ -137,7 +136,7 @@ const Footer = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            &copy; 2023 كريم محمد سالم ابحن. {t('allRightsReserved')}
+            &copy; 2023 كريم محمد سالم. {t('allRightsReserved')}
           </motion.p>
         </div>
       </div>

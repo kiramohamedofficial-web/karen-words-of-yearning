@@ -20,24 +20,34 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-white">
-            <motion.h1 
-              className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              {t('authorName')}
-            </motion.h1>
-            <motion.p 
-              className="text-xl md:text-2xl mb-8 leading-relaxed"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              {t('heroDescription')}
-            </motion.p>
+            <motion.div className="text-center mb-8">
+              <motion.h1 
+                className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                {t('authorName')}
+              </motion.h1>
+              <motion.p 
+                className="text-2xl md:text-3xl text-accent font-semibold mb-2"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                {t('authorSubtitle')}
+              </motion.p>
+              <motion.p 
+                className="text-xl md:text-2xl leading-relaxed"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                {t('heroDescription')}
+              </motion.p>
+            </motion.div>
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-4 justify-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -45,17 +55,17 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-white text-white hover:bg-white hover:text-primary-dark transition-smooth"
+                className="border-accent text-accent hover:bg-accent hover:text-primary-dark transition-smooth font-semibold"
                 asChild
               >
                 <a href="#books">{t('exploreBooks')}</a>
               </Button>
               <Button 
                 size="lg" 
-                className="bg-accent hover:bg-accent/90 text-white transition-smooth shadow-glow"
+                className="bg-accent hover:bg-accent-light text-primary-dark transition-smooth shadow-glow font-semibold"
                 asChild
               >
-                <a href="#contact">{t('contactMe')}</a>
+                <a href="#books">{t('readBooks')}</a>
               </Button>
             </motion.div>
           </div>

@@ -15,13 +15,13 @@ const translations = {
     about: 'عن الكاتب',
     books: 'المؤلفات',
     blog: 'المدونة',
-    contact: 'اتصل بي',
     
     // Hero
-    authorName: 'كريم محمد سالم ابحن',
-    heroDescription: 'كاتب وروائي شاب، يسرد لحظات الألم والحنين بلغةٍ بسيطةٍ مشبعةٍ بالعاطفة.',
+    authorName: 'كريم محمد سالم',
+    authorSubtitle: 'كاتب وروائي',
+    heroDescription: 'أسرد لحظات الألم والحنين بلغةٍ بسيطةٍ مشبعةٍ بالعاطفة.',
     exploreBooks: 'استكشف المؤلفات',
-    contactMe: 'تواصل معي',
+    readBooks: 'اقرأ الكتب',
     
     // About
     aboutAuthor: 'عن الكاتب',
@@ -30,24 +30,22 @@ const translations = {
     // Books
     works: 'المؤلفات',
     buyNow: 'اشتري الآن',
+    rateBook: 'قيّم الكتاب',
+    readOnline: 'اقرأ أونلاين',
+    downloadBook: 'تحميل الكتاب',
+    rating: 'التقييم',
+    reviews: 'المراجعات',
     
     // Blog
     latestArticles: 'أحدث المقالات',
     readMore: 'اقرأ المزيد',
-    
-    // Contact
-    contactUs: 'تواصل معي',
-    fullName: 'الاسم الكامل',
-    email: 'البريد الإلكتروني',
-    subject: 'الموضوع',
-    message: 'الرسالة',
-    sendMessage: 'إرسال الرسالة',
     
     // Footer
     aboutBlog: 'عن المدونة',
     quickLinks: 'روابط سريعة',
     newsletter: 'النشرة البريدية',
     allRightsReserved: 'جميع الحقوق محفوظة',
+    followMe: 'تابعني',
     
     // Auth
     login: 'تسجيل الدخول',
@@ -60,13 +58,13 @@ const translations = {
     about: 'About Author',
     books: 'Books',
     blog: 'Blog',
-    contact: 'Contact',
     
     // Hero
-    authorName: 'Karim Mohammed Salem Abhen',
-    heroDescription: 'A young novelist and writer who narrates moments of pain and nostalgia in simple language infused with emotion.',
+    authorName: 'Karim Mohammed Salem',
+    authorSubtitle: 'Novelist & Writer',
+    heroDescription: 'I narrate moments of pain and nostalgia in simple language infused with emotion.',
     exploreBooks: 'Explore Books',
-    contactMe: 'Contact Me',
+    readBooks: 'Read Books',
     
     // About
     aboutAuthor: 'About the Author',
@@ -75,24 +73,22 @@ const translations = {
     // Books
     works: 'Works',
     buyNow: 'Buy Now',
+    rateBook: 'Rate Book',
+    readOnline: 'Read Online',
+    downloadBook: 'Download Book',
+    rating: 'Rating',
+    reviews: 'Reviews',
     
     // Blog
     latestArticles: 'Latest Articles',
     readMore: 'Read More',
-    
-    // Contact
-    contactUs: 'Contact Us',
-    fullName: 'Full Name',
-    email: 'Email',
-    subject: 'Subject',
-    message: 'Message',
-    sendMessage: 'Send Message',
     
     // Footer
     aboutBlog: 'About Blog',
     quickLinks: 'Quick Links',
     newsletter: 'Newsletter',
     allRightsReserved: 'All Rights Reserved',
+    followMe: 'Follow Me',
     
     // Auth
     login: 'Login',

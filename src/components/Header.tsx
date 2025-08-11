@@ -25,7 +25,6 @@ const Header = () => {
     { href: "#about", label: t('about') },
     { href: "#books", label: t('books') },
     { href: "#blog", label: t('blog') },
-    { href: "#contact", label: t('contact') },
   ];
 
   return (
@@ -53,13 +52,16 @@ const Header = () => {
             >
               <PenTool className="w-8 h-8 text-accent" />
             </motion.div>
-            <div className="relative">
-              <h1 className="text-xl md:text-2xl font-bold text-white">
+            <div className="text-center">
+              <h1 className="text-xl md:text-2xl font-bold text-white leading-tight">
                 {t('authorName')}
               </h1>
+              <p className="text-sm text-accent font-medium opacity-90">
+                {t('authorSubtitle')}
+              </p>
               <motion.span 
-                className="absolute -bottom-1 -right-1 w-2 h-2 bg-accent rounded-full shadow-sm shadow-accent/50"
-                animate={{ scale: [1, 1.2, 1] }}
+                className="absolute -bottom-2 -right-2 w-3 h-3 bg-accent rounded-full shadow-sm shadow-accent/50"
+                animate={{ scale: [1, 1.2, 1], opacity: [0.8, 1, 0.8] }}
                 transition={{ duration: 2, repeat: Infinity }}
               />
             </div>
